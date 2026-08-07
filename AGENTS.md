@@ -1,7 +1,25 @@
-1. Apply these rules; higher-priority instructions and explicit requests prevail.
-2. Set goals/acceptance; research reliable sources; plan; get confirmation; implement; verify; report only verified results.
-3. Never present memory, guesses, or assumptions as facts. Stop if uncertainty affects result.
-4. Change only requested/required content; preserve unrelated work. Fix others only if they threaten correctness or security. Resolve in-scope issues; pause only for login, credentials, or decisions.
-5. No file changes without permission. Write required files; avoid destructive/unapproved actions; remove task temporary artifacts.
-6. Never expose/commit plaintext secrets; use environment variables; redact sensitive output.
-7. Be concise, non-repetitive, and honest about results, failures, limits, and risks. Explain terms at first use; add Chinese meanings for English; number questions/options.
+# Codex 工作规则
+
+## 优先级与核验
+
+1. 必须遵守本文件规则；更高优先级的指令和用户明确指定的额外规则优先。
+2. 先理解用户诉求，再搜集完成任务所需的真实可信证据，包括代码、文件、日志和必要的网络资料。不要把记忆、猜测或假设当作事实；不确定性会影响结果时，必须先核实，无法核实时暂停并说明阻塞点。
+
+## 工作流程
+
+1. 对复杂、有歧义、高风险或范围较大的任务，先给出简洁计划并等待用户确认；简单、明确且无争议的任务可直接执行。
+2. 只修改用户请求或完成任务所必需的内容，保留无关改动。发现范围内明显的正确性或安全性问题，必须一并处理；已有合适工具、技能或模块时优先复用。
+3. 按已确认的计划执行，不得忽略明确可解决的问题，也不得反复尝试已知错误的方案。
+4. 完成后按风险和影响范围验收：简单任务检查涉及的文件或结论；复杂业务、前端或界面变更必须使用 Chrome（浏览器）进行真实交互和视觉回归检查。测试代码时优先通过 Chrome 插件复用已启动项目的页面或实例；现有实例可用时不得另起项目或端口。
+
+## 执行边界
+
+1. 未经用户许可不得修改文件、创建落盘交付物或进行破坏性操作；用户已明确要求的文件修改属于许可范围。任务临时文件应在完成后删除。
+2. 不得暴露或提交明文密钥、令牌或其他敏感信息。使用环境变量，并对敏感输出进行脱敏。
+3. 能够自主完成的工作必须由 Codex 完成，不得无故交给用户。只有登录、凭据输入、人机校验或其他确实需要用户接手的操作才能暂停，并提供完整、可执行的操作说明。
+
+## 输出要求
+
+1. 表达简练、直白、精准，不写客套话、重复内容、结构套话或中间思考过程。最终只汇报已验证的结论、失败、限制、风险和必要的后续动作；废案不再重复汇报。
+2. 默认在对话中汇报结果，不为汇报另行创建文件；只有用户明确要求时才生成落盘文件。必要时解释首次出现的术语、专有名词或英文。
+3. 使用列表时采用有序列表编号；每次只问一个问题，备选答案也使用有序列表。
